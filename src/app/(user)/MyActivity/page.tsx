@@ -39,7 +39,7 @@ const MyActivity = ({ receiver }) => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ receiver:"0x906eCc2FC146E73484a91c1A9fD67f1c290FB71e" }),
+          body: JSON.stringify({ receiver:"0x1A329bA27dEC9b391D674A019E52fb478fcC089f" }),
         });
 
         if (!response.ok) {
@@ -47,6 +47,7 @@ const MyActivity = ({ receiver }) => {
         }
 
         const data = await response.json();
+        console.log(data)
         setActivityData(data);
         setFilteredData(data);
       } catch (err) {

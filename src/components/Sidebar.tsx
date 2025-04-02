@@ -12,7 +12,7 @@ import {
   CommandShortcut,
 } from "@/components/ui/command";
 import Link from "next/link";
-import { House, Activity, File, User, Settings } from "lucide-react";
+import { House, Activity, File, User, Bot } from "lucide-react";
 
 function Sidebar() {
   return (
@@ -34,6 +34,10 @@ function Sidebar() {
             <Link href="/RequestDoc">Request Document</Link>
           </CommandItem>
           <CommandItem>
+            <Bot className="mr-2 h-4 w-4" />
+            <Link href="https://v0-modern-react-frontend.vercel.app" target="_blank">Ask Pramanik</Link>
+          </CommandItem>
+          <CommandItem>
             <Activity className="mr-2 h-4 w-4" />
             <Link href="/MyActivity">My Activity</Link>
           </CommandItem>
@@ -48,10 +52,10 @@ function Sidebar() {
             <User className="mr-2 h-4 w-4" />
             <Link href="/Profile">Profile</Link>
           </CommandItem>
-          <CommandItem>
+          {/* <CommandItem>
             <Settings className="mr-2 h-4 w-4" />
             <Link href="/SettingsPage">Settings</Link>
-          </CommandItem>
+          </CommandItem> */}
         </CommandGroup>
       </CommandList>
     </Command>
